@@ -1,102 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Hold Shift to Check Multiple Checkboxes</title>
-  <link rel="icon" href="https://fav.farm/🔥" />
+    <meta charset="UTF-8">
+    <title>Hold Shift to Check Multiple Checkboxes</title>
+    <link rel="icon" href="https://fav.farm/🔥" />
 </head>
+
 <body>
-  <style>
+    <style>
+        html {
+            font-family: sans-serif;
+            background: #ffc600;
+        }
 
-    html {
-      font-family: sans-serif;
-      background: #ffc600;
-    }
+        .inbox {
+            max-width: 400px;
+            margin: 50px auto;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+        }
 
-    .inbox {
-      max-width: 400px;
-      margin: 50px auto;
-      background: white;
-      border-radius: 5px;
-      box-shadow: 10px 10px 0 rgba(0,0,0,0.1);
-    }
+        .item {
+            border-bottom: 1px solid #F1F1F1;
+        }
 
-    .item {
-      display: flex;
-      align-items: center;
-      border-bottom: 1px solid #F1F1F1;
-    }
+        .item label {
+            display: flex;
+            align-items: center;
 
-    .item:last-child {
-      border-bottom: 0;
-    }
+        }
 
-    input:checked + p {
-      background: #F9F9F9;
-      text-decoration: line-through;
-    }
+        .item:last-child {
+            border-bottom: 0;
+        }
 
-    input[type="checkbox"] {
-      margin: 20px;
-    }
+        input:checked+span {
+            background: #F9F9F9;
+            text-decoration: line-through;
+        }
 
-    p {
-      margin: 0;
-      padding: 20px;
-      transition: background 0.2s;
-      flex: 1;
-      font-family:'helvetica neue';
-      font-size: 20px;
-      font-weight: 200;
-      border-left: 1px solid #D1E2FF;
-    }
-  </style>
-   <!--
+        input[type="checkbox"] {
+            margin: 20px;
+        }
+
+        span {
+            margin: 0;
+            padding: 20px;
+            transition: background 0.2s;
+            flex: 1;
+            font-family: 'helvetica neue';
+            font-size: 20px;
+            font-weight: 200;
+            border-left: 1px solid #D1E2FF;
+        }
+    </style>
+    <!--
    The following is a common layout you would see in an email client.
 
    When a user clicks a checkbox, holds Shift, and then clicks another checkbox a few rows down, all the checkboxes inbetween those two checkboxes should be checked.
 
   -->
-  <div class="inbox">
-    <div class="item">
-      <input type="checkbox">
-      <p>This is an inbox layout.</p>
+    <div class="inbox">
+        <div class="item">
+            <label>
+                <input type="checkbox">
+                <span>This is an inbox layout.</span>
+            </label>
+        </div>
+        <div class="item">
+            <label>
+                <input type="checkbox">
+                <span>Check one item</span>
+            </label>
+        </div>
+        <div class="item">
+            <label>
+                <input type="checkbox">
+                <span>Hold down your Shift key</span>    
+            </label>
+        </div>
+        <div class="item">
+            <label>
+                <input type="checkbox">
+                <span>Check a lower item</span>
+            </label>
+        </div>
+        <div class="item">
+            <label>
+                <input type="checkbox">
+                <span>Everything in between should also be set to checked</span>    
+            </label>
+        </div>
+        <div class="item">
+            <label>
+                <input type="checkbox">
+                <span>Try to do it without any libraries</span>
+            </label>
+        </div>
+        <div class="item">
+            <label>
+                <input type="checkbox">
+                <span>Just regular JavaScript</span>    
+            </label>
+        </div>
+        <div class="item">
+            <label>
+                <input type="checkbox">
+                <span>Good Luck!</span>    
+            </label>
+        </div>
+        <div class="item">
+            <label>
+                <input type="checkbox">
+                <span>Don't forget to tweet your result!</span>    
+            </label>
+        </div>
     </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Check one item</p>
-    </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Hold down your Shift key</p>
-    </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Check a lower item</p>
-    </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Everything in between should also be set to checked</p>
-    </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Try to do it without any libraries</p>
-    </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Just regular JavaScript</p>
-    </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Good Luck!</p>
-    </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Don't forget to tweet your result!</p>
-    </div>
-  </div>
 
-<script>
-</script>
+    <script>
+    </script>
 </body>
+
 </html>
